@@ -212,7 +212,7 @@ export default function GeneralMetrics({
     } = {};
 
     statsHistory.forEach((stats, statsIdx) => {
-      if (!stats) {
+      if (!stats || !stats.gpu) {
         return;
       }
 
@@ -245,7 +245,7 @@ export default function GeneralMetrics({
     } = {};
 
     statsHistory.forEach((stats, statsIdx) => {
-      if (!stats) {
+      if (!stats || !stats.mem) {
         return;
       }
 
